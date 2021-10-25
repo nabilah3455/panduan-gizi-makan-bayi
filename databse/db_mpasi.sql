@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.4
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 14, 2020 at 09:25 AM
--- Server version: 10.4.16-MariaDB
--- PHP Version: 7.4.12
+-- Waktu pembuatan: 25 Okt 2021 pada 10.13
+-- Versi server: 10.4.21-MariaDB
+-- Versi PHP: 7.4.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,7 +24,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Struktur dari tabel `admin`
 --
 
 CREATE TABLE `admin` (
@@ -36,7 +36,7 @@ CREATE TABLE `admin` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `defuzzy`
+-- Struktur dari tabel `defuzzy`
 --
 
 CREATE TABLE `defuzzy` (
@@ -50,7 +50,7 @@ CREATE TABLE `defuzzy` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kalkulator_gizi`
+-- Struktur dari tabel `kalkulator_gizi`
 --
 
 CREATE TABLE `kalkulator_gizi` (
@@ -68,7 +68,7 @@ CREATE TABLE `kalkulator_gizi` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kandungan_gizi_bahan_mpasi`
+-- Struktur dari tabel `kandungan_gizi_bahan_mpasi`
 --
 
 CREATE TABLE `kandungan_gizi_bahan_mpasi` (
@@ -78,7 +78,7 @@ CREATE TABLE `kandungan_gizi_bahan_mpasi` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `kandungan_gizi_bahan_mpasi`
+-- Dumping data untuk tabel `kandungan_gizi_bahan_mpasi`
 --
 
 INSERT INTO `kandungan_gizi_bahan_mpasi` (`id_bahan`, `nama_bahan`, `kandungan_bahan`) VALUES
@@ -105,7 +105,7 @@ INSERT INTO `kandungan_gizi_bahan_mpasi` (`id_bahan`, `nama_bahan`, `kandungan_b
 -- --------------------------------------------------------
 
 --
--- Table structure for table `min`
+-- Struktur dari tabel `min`
 --
 
 CREATE TABLE `min` (
@@ -117,20 +117,116 @@ CREATE TABLE `min` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `min1`
+-- Struktur dari tabel `min1`
 --
 
 CREATE TABLE `min1` (
   `id_user` int(10) NOT NULL,
   `idrule` varchar(10) NOT NULL,
   `min` varchar(10) NOT NULL,
-  `tgl_cek` date NOT NULL
+  `tgl_cek` date DEFAULT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `min1`
+--
+
+INSERT INTO `min1` (`id_user`, `idrule`, `min`, `tgl_cek`) VALUES
+(7, 'R1', '0', NULL),
+(7, 'R2', '0', NULL),
+(7, 'R3', '-0.576', NULL),
+(7, 'R4', '0', NULL),
+(7, 'R5', '0', NULL),
+(7, 'R6', '-0.576', NULL),
+(7, 'R7', '0', NULL),
+(7, 'R8', '0', NULL),
+(7, 'R9', '-0.576', NULL),
+(7, 'R10', '0', NULL),
+(7, 'R11', '0', NULL),
+(7, 'R12', '-0.576', NULL),
+(7, 'R13', '0', NULL),
+(7, 'R14', '0', NULL),
+(7, 'R15', '-0.576', NULL),
+(7, 'R16', '0', NULL),
+(7, 'R17', '0.75', NULL),
+(7, 'R18', '-0.576', NULL),
+(7, 'R19', '0', NULL),
+(7, 'R20', '0', NULL),
+(7, 'R21', '-0.576', NULL),
+(7, 'R22', '0', NULL),
+(7, 'R23', '0', NULL),
+(7, 'R24', '-0.576', NULL),
+(7, 'R25', '0', NULL),
+(7, 'R26', '0.25', NULL),
+(7, 'R27', '-0.576', NULL),
+(7, 'R28', '0', NULL),
+(7, 'R29', '0', NULL),
+(7, 'R30', '-0.576', NULL),
+(7, 'R31', '0', NULL),
+(7, 'R32', '0', NULL),
+(7, 'R33', '-0.576', NULL),
+(7, 'R34', '0', NULL),
+(7, 'R35', '0.25', NULL),
+(7, 'R36', '-0.576', NULL),
+(7, 'R37', '0', NULL),
+(7, 'R38', '0', NULL),
+(7, 'R39', '-0.576', NULL),
+(7, 'R40', '0', NULL),
+(7, 'R41', '0', NULL),
+(7, 'R42', '-0.576', NULL),
+(7, 'R43', '0', NULL),
+(7, 'R44', '0.25', NULL),
+(7, 'R45', '-0.576', NULL),
+(8, 'R1', '0', '2021-10-25'),
+(8, 'R2', '0', '2021-10-25'),
+(8, 'R3', '-0.961', '2021-10-25'),
+(8, 'R4', '0', '2021-10-25'),
+(8, 'R5', '0.333', '2021-10-25'),
+(8, 'R6', '-0.961', '2021-10-25'),
+(8, 'R7', '-0.285', '2021-10-25'),
+(8, 'R8', '-0.285', '2021-10-25'),
+(8, 'R9', '-0.285', '2021-10-25'),
+(8, 'R10', '0', '2021-10-25'),
+(8, 'R11', '0', '2021-10-25'),
+(8, 'R12', '-0.961', '2021-10-25'),
+(8, 'R13', '0', '2021-10-25'),
+(8, 'R14', '0.666', '2021-10-25'),
+(8, 'R15', '-0.961', '2021-10-25'),
+(8, 'R16', '-0.285', '2021-10-25'),
+(8, 'R17', '-0.285', '2021-10-25'),
+(8, 'R18', '-0.285', '2021-10-25'),
+(8, 'R19', '0', '2021-10-25'),
+(8, 'R20', '0', '2021-10-25'),
+(8, 'R21', '-0.961', '2021-10-25'),
+(8, 'R22', '0', '2021-10-25'),
+(8, 'R23', '0', '2021-10-25'),
+(8, 'R24', '-0.961', '2021-10-25'),
+(8, 'R25', '-0.285', '2021-10-25'),
+(8, 'R26', '-0.285', '2021-10-25'),
+(8, 'R27', '-0.285', '2021-10-25'),
+(8, 'R28', '0', '2021-10-25'),
+(8, 'R29', '0', '2021-10-25'),
+(8, 'R30', '-0.961', '2021-10-25'),
+(8, 'R31', '0', '2021-10-25'),
+(8, 'R32', '0', '2021-10-25'),
+(8, 'R33', '-0.961', '2021-10-25'),
+(8, 'R34', '-0.285', '2021-10-25'),
+(8, 'R35', '-0.285', '2021-10-25'),
+(8, 'R36', '-0.285', '2021-10-25'),
+(8, 'R37', '0', '2021-10-25'),
+(8, 'R38', '0', '2021-10-25'),
+(8, 'R39', '-0.961', '2021-10-25'),
+(8, 'R40', '0', '2021-10-25'),
+(8, 'R41', '0', '2021-10-25'),
+(8, 'R42', '-0.961', '2021-10-25'),
+(8, 'R43', '-0.285', '2021-10-25'),
+(8, 'R44', '-0.285', '2021-10-25'),
+(8, 'R45', '-0.285', '2021-10-25');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mpasi_menu`
+-- Struktur dari tabel `mpasi_menu`
 --
 
 CREATE TABLE `mpasi_menu` (
@@ -143,7 +239,7 @@ CREATE TABLE `mpasi_menu` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `mpasi_menu`
+-- Dumping data untuk tabel `mpasi_menu`
 --
 
 INSERT INTO `mpasi_menu` (`id_menu`, `judul_menu`, `bahan_menu`, `resep_menu`, `foto`, `usia`) VALUES
@@ -186,7 +282,7 @@ INSERT INTO `mpasi_menu` (`id_menu`, `judul_menu`, `bahan_menu`, `resep_menu`, `
 -- --------------------------------------------------------
 
 --
--- Table structure for table `mpasi_news`
+-- Struktur dari tabel `mpasi_news`
 --
 
 CREATE TABLE `mpasi_news` (
@@ -196,7 +292,7 @@ CREATE TABLE `mpasi_news` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `mpasi_news`
+-- Dumping data untuk tabel `mpasi_news`
 --
 
 INSERT INTO `mpasi_news` (`id_news`, `judul_news`, `isi_news`) VALUES
@@ -215,7 +311,7 @@ INSERT INTO `mpasi_news` (`id_news`, `judul_news`, `isi_news`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rule`
+-- Struktur dari tabel `rule`
 --
 
 CREATE TABLE `rule` (
@@ -225,7 +321,7 @@ CREATE TABLE `rule` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `rule`
+-- Dumping data untuk tabel `rule`
 --
 
 INSERT INTO `rule` (`idrule`, `maka`, `daerah`) VALUES
@@ -278,7 +374,7 @@ INSERT INTO `rule` (`idrule`, `maka`, `daerah`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `rule1`
+-- Struktur dari tabel `rule1`
 --
 
 CREATE TABLE `rule1` (
@@ -288,7 +384,7 @@ CREATE TABLE `rule1` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `rule1`
+-- Dumping data untuk tabel `rule1`
 --
 
 INSERT INTO `rule1` (`idrule`, `idvariabel`, `rule1`) VALUES
@@ -431,7 +527,7 @@ INSERT INTO `rule1` (`idrule`, `idvariabel`, `rule1`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Struktur dari tabel `user`
 --
 
 CREATE TABLE `user` (
@@ -448,7 +544,7 @@ CREATE TABLE `user` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `variabel`
+-- Struktur dari tabel `variabel`
 --
 
 CREATE TABLE `variabel` (
@@ -472,7 +568,7 @@ CREATE TABLE `variabel` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `variabel`
+-- Dumping data untuk tabel `variabel`
 --
 
 INSERT INTO `variabel` (`idvariabel`, `variabel`, `nilai1`, `nilai11`, `nilai2`, `nilai22`, `nilai3`, `nilai33`, `nilai4`, `nilai44`, `nilai5`, `nilai55`, `atr1`, `atr2`, `atr3`, `atr4`, `atr5`) VALUES
@@ -483,7 +579,7 @@ INSERT INTO `variabel` (`idvariabel`, `variabel`, `nilai1`, `nilai11`, `nilai2`,
 -- --------------------------------------------------------
 
 --
--- Table structure for table `var_output`
+-- Struktur dari tabel `var_output`
 --
 
 CREATE TABLE `var_output` (
@@ -510,7 +606,7 @@ CREATE TABLE `var_output` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `var_output`
+-- Dumping data untuk tabel `var_output`
 --
 
 INSERT INTO `var_output` (`nilai1`, `nilai11`, `nilai2`, `nilai22`, `nilai3`, `nilai33`, `nilai4`, `nilai44`, `nilai5`, `nilai55`, `atr1`, `atr2`, `atr3`, `atr4`, `atr5`, `kendali1`, `kendali2`, `kendali3`, `kendali4`, `kendali5`) VALUES
@@ -521,107 +617,107 @@ INSERT INTO `var_output` (`nilai1`, `nilai11`, `nilai2`, `nilai22`, `nilai3`, `n
 --
 
 --
--- Indexes for table `admin`
+-- Indeks untuk tabel `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id_admin`);
 
 --
--- Indexes for table `defuzzy`
+-- Indeks untuk tabel `defuzzy`
 --
 ALTER TABLE `defuzzy`
-  ADD PRIMARY KEY (`id_defuzzy`);
+  ADD PRIMARY KEY (`id_defuzzy`) USING BTREE;
 
 --
--- Indexes for table `kalkulator_gizi`
+-- Indeks untuk tabel `kalkulator_gizi`
 --
 ALTER TABLE `kalkulator_gizi`
   ADD PRIMARY KEY (`id_hitung`);
 
 --
--- Indexes for table `kandungan_gizi_bahan_mpasi`
+-- Indeks untuk tabel `kandungan_gizi_bahan_mpasi`
 --
 ALTER TABLE `kandungan_gizi_bahan_mpasi`
   ADD PRIMARY KEY (`id_bahan`);
 
 --
--- Indexes for table `mpasi_menu`
+-- Indeks untuk tabel `mpasi_menu`
 --
 ALTER TABLE `mpasi_menu`
   ADD PRIMARY KEY (`id_menu`);
 
 --
--- Indexes for table `mpasi_news`
+-- Indeks untuk tabel `mpasi_news`
 --
 ALTER TABLE `mpasi_news`
   ADD PRIMARY KEY (`id_news`);
 
 --
--- Indexes for table `rule`
+-- Indeks untuk tabel `rule`
 --
 ALTER TABLE `rule`
   ADD PRIMARY KEY (`idrule`);
 
 --
--- Indexes for table `user`
+-- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`id_user`);
 
 --
--- Indexes for table `variabel`
+-- Indeks untuk tabel `variabel`
 --
 ALTER TABLE `variabel`
   ADD PRIMARY KEY (`idvariabel`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT untuk tabel `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(3) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_admin` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `defuzzy`
+-- AUTO_INCREMENT untuk tabel `defuzzy`
 --
 ALTER TABLE `defuzzy`
-  MODIFY `id_defuzzy` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_defuzzy` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `kalkulator_gizi`
+-- AUTO_INCREMENT untuk tabel `kalkulator_gizi`
 --
 ALTER TABLE `kalkulator_gizi`
-  MODIFY `id_hitung` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_hitung` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
--- AUTO_INCREMENT for table `kandungan_gizi_bahan_mpasi`
+-- AUTO_INCREMENT untuk tabel `kandungan_gizi_bahan_mpasi`
 --
 ALTER TABLE `kandungan_gizi_bahan_mpasi`
   MODIFY `id_bahan` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
--- AUTO_INCREMENT for table `mpasi_menu`
+-- AUTO_INCREMENT untuk tabel `mpasi_menu`
 --
 ALTER TABLE `mpasi_menu`
   MODIFY `id_menu` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
 --
--- AUTO_INCREMENT for table `mpasi_news`
+-- AUTO_INCREMENT untuk tabel `mpasi_news`
 --
 ALTER TABLE `mpasi_news`
   MODIFY `id_news` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=1023;
 
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int(5) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_user` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `variabel`
+-- AUTO_INCREMENT untuk tabel `variabel`
 --
 ALTER TABLE `variabel`
   MODIFY `idvariabel` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
